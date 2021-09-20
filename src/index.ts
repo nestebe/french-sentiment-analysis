@@ -2,29 +2,19 @@ import { AggressiveTokenizerFr, SentimentAnalyzer, PorterStemmerFr } from 'natur
 import stopword from 'stopword';
 
 
-const sfd = require("../pattern/pattern-sentiment-fr.json")
-
 const tokenizer = new AggressiveTokenizerFr();
 const analyzer = new SentimentAnalyzer("French", PorterStemmerFr, "pattern")
 
-
-
-export function getSentiment(sentence: string): any {
+export function getSentiment(sentence: string): Sentiment {
     if (!sentence.trim()) {
-        return 0
+        return Sentiment.NEUTRAL
     }
 
-    console.log(sentence)
     //remove special caracters
-
-
     const tokenized = tokenizer.tokenize(sentence)
-
+    //remove stop words
     const stopWordsRemoved = stopword.removeStopwords(tokenized)
 
-    console.log(stopWordsRemoved)
-
-
-    return analyzer.getSentiment(stopWordsRemoved)
+    return analyzer.getSentiment(stopWordsRemoved) < 0 ? Sentiment.NEGATIVE : Sentiment.POSITIVE
 }
 
