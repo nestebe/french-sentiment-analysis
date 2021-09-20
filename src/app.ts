@@ -2,14 +2,14 @@ import { AggressiveTokenizerFr, SentimentAnalyzer, PorterStemmerFr } from 'natur
 import stopword from 'stopword';
 
 
-const sfd = require("./pattern-sentiment-fr.json")
+const sfd = require("../pattern/pattern-sentiment-fr.json")
 
 const tokenizer = new AggressiveTokenizerFr();
 const analyzer = new SentimentAnalyzer("French", PorterStemmerFr, "pattern")
 
 
 
-function getSentiment(sentence: string): any {
+export function getSentiment(sentence: string): any {
     if (!sentence.trim()) {
         return 0
     }
