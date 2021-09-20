@@ -20,7 +20,9 @@
     "build": "tsc",
     "test": "tsc && jest",
     "prepare": "npm run build",
-    "prepublishOnly": "npm test"
+    "prepublishOnly": "npm test",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "dependencies": {
     "natural": "^5.1.1",
