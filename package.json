@@ -1,0 +1,20 @@
+{
+  "name": "french-sentiment-analysis",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Nicolas",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev --respawn -- src/app.ts"
+  },
+  "dependencies": {
+    "natural": "^5.1.1",
+    "stopword": "^1.0.11"
+  },
+  "devDependencies": {
+    "@types/natural": "^5.0.0",
+    "@types/stopword": "^1.0.2",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.4.3"
+  }
+}
