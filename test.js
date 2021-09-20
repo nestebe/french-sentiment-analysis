@@ -1,4 +1,4 @@
-const lib = require("./lib/app.js")
+const lib = require("./lib/index.js")
 
 
 test("test positive sentiment", () => {
