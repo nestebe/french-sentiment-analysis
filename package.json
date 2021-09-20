@@ -1,7 +1,7 @@
 {
   "name": "french-sentiment-analysis",
   "description": "Sentiment analysis is the process of detecting positive or negative sentiment in text",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "author": "Nicolas ESTEBE",
@@ -20,9 +20,7 @@
     "build": "tsc",
     "test": "tsc && jest",
     "prepare": "npm run build",
-    "prepublishOnly": "npm test",
-    "version": "npm run format && git add -A src",
-    "postversion": "git push && git push --tags"
+    "prepublishOnly": "npm test"
   },
   "dependencies": {
     "natural": "^5.1.1",
