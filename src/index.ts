@@ -1,4 +1,6 @@
 
 
-exports.Sentiment = require('./enums')
-exports.FrenchSentimentAnalyzer = require('./sentimentAnalyzer')
+import { Sentiment } from './enums'
+import { FrenchSentimentAnalyzer } from './sentimentAnalyzer'
+
+export { FrenchSentimentAnalyzer, Sentiment }
